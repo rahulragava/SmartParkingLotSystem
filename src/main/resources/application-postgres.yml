@@ -1,0 +1,9 @@
+# Activate with: --spring.profiles.active=postgres
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/parking}
+    username: ${DB_USER:parking}
+    password: ${DB_PASSWORD:parking}
+  jpa:
+    hibernate:
+      ddl-auto: update   # reference DDL in docs/schema.sql; prefer Flyway/Liquibase for production
